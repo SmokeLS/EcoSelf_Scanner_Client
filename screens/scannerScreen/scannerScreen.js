@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState, useEffect } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button, Image } from 'react-native';
 import { BarCodeScanner, barCodeScanner } from 'expo-barcode-scanner';
 
 function ScannerScreen() {
@@ -37,7 +37,8 @@ function ScannerScreen() {
     return (
       <View>
         <Text>No access to camera</Text>
-        <Button title={'Allow camera'} onPress={() => askForCameraPermission()}></Button>
+        <Button onPress={() => askForCameraPermission()}>
+        </Button>
       </View>
     );
   }
