@@ -10,17 +10,21 @@ import InfoSelected from '../assets/icons/infoSelected.png';
 import Map from '../assets/icons/map.png';
 import MapSelected from '../assets/icons/mapSelected.png';
 
-import {screens} from '../global/globalConstants';
+import { screens } from '../global/globalConstants';
 import infoStack from './infoStack';
 import mapStack from './mapStack';
 import scannerStack from './scannerStack';
 
 const Tab = createBottomTabNavigator();
 
-export default function App() {
+export default function SwitchNavigation() {
   return (
     <NavigationContainer>
-      <Tab.Navigator>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarStyle: { height: 70 },
+        }}
+      >
         <Tab.Screen
           name={screens.Info}
           component={infoStack}
@@ -59,9 +63,9 @@ export default function App() {
 
 const styles = StyleSheet.create({
   imageStyles: {
-    marginBottom: 30,
+    marginBottom: 0,
   },
   choosenImageStyles: {
-    marginBottom: 50,
+    marginBottom: 40,
   },
 });
