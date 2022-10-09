@@ -10,6 +10,7 @@ import InfoSelected from '../assets/icons/infoSelected.png';
 import Map from '../assets/icons/map.png';
 import MapSelected from '../assets/icons/mapSelected.png';
 
+import {screens} from '../global/globalConstants';
 import infoStack from './infoStack';
 import mapStack from './mapStack';
 import scannerStack from './scannerStack';
@@ -21,10 +22,10 @@ export default function App() {
     <NavigationContainer>
       <Tab.Navigator>
         <Tab.Screen
-          name="Info"
+          name={screens.Info}
           component={infoStack}
           options={{
-            title: 'Info',
+            title: `${screens.Info}`,
             tabBarIcon: () => {
               return <Image style={styles.imageStyles} source={Info} />;
             },
@@ -32,20 +33,20 @@ export default function App() {
         />
 
         <Tab.Screen
-          name="Scanner"
+          name={screens.Scanner}
           component={scannerStack}
           options={{
-            title: 'Scanner',
+            title: `${screens.Scanner}`,
             tabBarIcon: () => {
               return <Image style={styles.choosenImageStyles} source={CodeSelected} />;
             },
           }}
         />
         <Tab.Screen
-          name="Map"
+          name={screens.Map}
           component={mapStack}
           options={{
-            title: 'Map',
+            title: `${screens.Map}`,
             tabBarIcon: () => {
               return <Image style={styles.imageStyles} source={Map} />;
             },

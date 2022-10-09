@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { screens } from '../global/globalConstants.js';
 import MapScreen from '../screens/mapScreen/mapScreen';
 
 const Stack = createNativeStackNavigator();
@@ -12,7 +13,7 @@ function MapStack() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="MapScreen" component={MapScreen} />
+      <Stack.Screen name={screens.MapScreen} component={MapScreen} />
     </Stack.Navigator>
   );
 }

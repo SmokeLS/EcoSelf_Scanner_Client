@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import {screens} from "../global/globalConstants";
 import InfoScreen from '../screens/infoScreen/infoScreen';
 
 const Stack = createNativeStackNavigator();
@@ -12,7 +13,7 @@ function InfoStack() {
         headerShown: false,
       }}
     >
-      <Stack.Screen name="InfoScreen" component={InfoScreen} />
+      <Stack.Screen name={screens.InfoScreen} component={InfoScreen} />
     </Stack.Navigator>
   );
 }
