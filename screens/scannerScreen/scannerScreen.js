@@ -53,7 +53,7 @@ function ScannerScreen() {
       </View>
       <Text style={styles.maintext}>{text}</Text>
 
-      {scanned && <Button title={'scan again?'} onPress={() => setScanned(false)} color="tomato" />}
+      {scanned ? <Button title={'scan again?'} onPress={() => setScanned(false)} color="tomato" /> : null}
     </View>
   );
 }
